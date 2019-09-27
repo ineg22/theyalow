@@ -124,8 +124,6 @@ div.logo-wrapper > h1 {
 }
 
 .nav-wrapper ul {
-  position: absolute;
-
   display: flex;
   width: 453px;
   height: 41px;
@@ -138,56 +136,65 @@ div.logo-wrapper > h1 {
 }
 
 .nav-wrapper li:nth-child(1) {
-  width: 136px;
+  width: 176px;
   height: 41px;
-  padding-left: 38px;
+  border-right: 1px solid #dcb105;
 }
 
 .nav-wrapper li:nth-child(2) {
-  width: 124px;
+  width: 135px;
   height: 41px;
-  padding-left: 13px;
+  border-right: 1px solid #dcb105;
 }
 
 .nav-wrapper li:nth-child(3) {
-  position: relative;
-
-  width: 130px;
+  width: 150px;
   height: 41px;
-  padding-left: 14px;
 }
 
 .nav-wrapper li a {
-  display: flex;
-  align-items: center;
+  position: relative;
+  display: block;
   height: 41px;
-
+  width: 100%;
   text-decoration: none;
-}
-
-.nav-wrapper li p {
-  margin: 0 0 0 9px;
-
   font-size: 17px;
   font-family: "Segoe WP", sans-serif;
-  text-align: center;
   color: #9b7d08;
   text-transform: uppercase;
   letter-spacing: 0.2px;
 }
 
-.nav-wrapper li:nth-child(3) p {
+.nav-wrapper li a span {
+  line-height: 41px;
   position: absolute;
-  top: 9px;
-  right: 22px;
-
-  margin: 0 0 0 6px;
 }
 
-.nav-wrapper li:nth-child(3) img {
-  position: absolute;
-  top: 10px;
-  left: -2px;
+.nav-wrapper li:nth-child(1) a img {
+  margin-left: 38px;
+  margin-top: 10px;
+}
+
+.nav-wrapper li:nth-child(1) a span {
+  left: 69px;
+}
+
+.nav-wrapper li:nth-child(2) a img {
+  margin-left: 13px;
+  margin-top: 10px;
+}
+
+.nav-wrapper li:nth-child(2) a span {
+  left: 41px;
+}
+
+.nav-wrapper li:nth-child(3) a img {
+  margin-left: 16px;
+  margin-top: 10px;
+}
+
+.nav-wrapper li:nth-child(3) a span {
+  left: 48px;
 }
 
 .nav-wrapper li:hover {
@@ -218,6 +225,10 @@ section.player-wrap video {
   height: 327px;
 }
 
+section.player-wrap video[poster] {
+  object-fit: cover;
+}
+
 section.player-wrap button {
   position: absolute;
   z-index: 3;
@@ -240,6 +251,11 @@ section.player-wrap button.play-center-btn {
   border-radius: 33px;
 }
 
+section.player-wrap button.play-center-btn:hover {
+  background-color: rgba(245, 197, 6, 1);
+  border: 0.5px solid rgb(117, 29, 151);
+}
+
 button.play-center-btn img {
   margin-top: 3px;
   margin-left: 7px;
@@ -253,6 +269,11 @@ section.player-wrap button.play-bot-btn {
   height: 27px;
 
   background-color: rgba(245, 197, 6, 0.37);
+}
+
+section.player-wrap button.play-bot-btn:hover {
+  border: 0.5px solid rgb(117, 29, 151);
+  background-color: rgba(245, 197, 6, 1);
 }
 
 button.play-bot-btn img {
@@ -274,6 +295,11 @@ section.player-wrap div.video-scroll {
   cursor: pointer;
 }
 
+section.player-wrap div.video-scroll:hover {
+  background-color: rgba(245, 197, 6, 0.72);
+  border: 0.5px solid rgb(117, 29, 151);
+}
+
 section.player-wrap div.video-scroll > div {
   width: 179px;
   height: 12px;
@@ -291,6 +317,11 @@ section.player-wrap button.mute-btn {
   height: 15px;
 
   background-color: transparent;
+}
+
+section.player-wrap button.mute-btn:hover {
+  background-color: rgba(245, 197, 6, 0.28);
+  border: 0.5px solid rgb(117, 29, 151);
 }
 
 section.player-wrap div.effects {
@@ -465,6 +496,10 @@ section.slider div.media-wrapper div.note button {
   cursor: pointer;
 }
 
+section.slider div.media-wrapper div.note button img:hover {
+  background-color: rgb(117, 29, 151);
+}
+
 section.slider div.media-wrapper div.mini-video {
   position: relative;
 
@@ -475,6 +510,10 @@ section.slider div.media-wrapper div.mini-video {
 section.slider div.media-wrapper div.mini-video video {
   width: 315px;
   height: 233px;
+}
+
+section.slider div.media-wrapper div.mini-video video[poster] {
+  object-fit: cover;
 }
 
 section.slider div.media-wrapper div.mini-video button {
@@ -489,6 +528,11 @@ section.slider div.media-wrapper div.mini-video button {
   border: 0;
   border-radius: 30px;
   cursor: pointer;
+}
+
+section.slider div.media-wrapper div.mini-video button:hover {
+  background-color: rgba(245, 197, 6, 1);
+  border: 0.5px solid rgb(117, 29, 151);
 }
 
 section.slider div.media-wrapper div.twitter {
@@ -534,6 +578,10 @@ section.slider div.media-wrapper div.twitter button {
   background-color: transparent;
   border: 0;
   cursor: pointer;
+}
+
+section.slider div.media-wrapper div.twitter button img:hover {
+  background-color: rgb(117, 29, 151);
 }
 
 section.slider div.date {
@@ -828,5 +876,28 @@ button:hover {
 
 
 /* 640 x 1553 */
-@media (max-width: 640px) {
-}
+/* @media (max-width: 640px) {
+  .global-wrapper,
+  .wrapper {
+    width: 640px;
+  }
+
+  .content-wrapper {
+    width: 100%;
+  }
+
+  .footer {
+    width: 640px;
+  }
+
+  .shadow,
+  .left-btn,
+  .right-btn {
+    display: none;
+  }
+
+  section.add-info .one-more-wrap div:nth-child(2),
+  section.player-wrap > div:nth-child(2) {
+    display: none;
+  }
+} */
