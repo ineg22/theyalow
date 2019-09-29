@@ -87,40 +87,14 @@ div.logo-wrapper > h1 {
   margin: 71px 2px 0 0;
 }
 
-.nav-wrapper div:nth-child(1) {
-  position: absolute;
-  top: -8px;
-  right: 8px;
-  z-index: 2;
-
-  width: 453px;
-  height: 41px;
-
-  background-color: rgba(245, 197, 5, 0.27);
-}
-
-.nav-wrapper div:nth-child(2) {
-  position: absolute;
-  top: -5px;
-  right: 4px;
-  z-index: 3;
-
-  width: 453px;
-  height: 41px;
-
-  background-color: rgba(245, 197, 5, 0.27);
-}
-
 .nav-wrapper nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 4;
+  margin-left: 7px;
 
   width: 453px;
   height: 41px;
 
   background-color: #f5c505;
+  box-shadow: -4px -5px 0 rgba(245, 197, 6, 0.3), -8px -8px 0 rgba(245, 197, 6, 0.25);
 }
 
 .nav-wrapper ul {
@@ -231,6 +205,7 @@ section.player-wrap video {
   height: 327px;
 
   background: url("../assets/video-assets/poster.jpg");
+  background-size: 100%;
 }
 
 section.player-wrap video[poster] {
@@ -342,7 +317,7 @@ section.player-wrap div.effects {
   height: 100%;
 
   background-color: rgba(245, 197, 6, 0.11);
-  box-shadow: 0 0 5px 0 rgba(239, 220, 143, 0.2);
+  box-shadow: 0 0 5px 0 rgba(29, 27, 18, 0.2);
 }
 
 section.player-wrap > div {
@@ -359,17 +334,16 @@ section.player-wrap > div > p {
   text-align: center;
   color: #f5c506;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.7px;
 }
 
 section.player-wrap > div > p:nth-child(1) {
   margin-top: 8px;
-  margin-right: 13px;
+  margin-right: 16px;
 }
 
 section.player-wrap > div > p:nth-child(2) {
   margin-top: -3px;
-  margin-right: -2px;
 
   color: #ffffff;
 }
@@ -911,7 +885,6 @@ button.right-btn:hover {
 
   section.slider div.media-wrapper div.twitter p,
   section.slider div.media-wrapper div.twitter button,
-  .nav-wrapper > div,
   section.add-info .one-more-wrap div:nth-child(2),
   section.player-wrap > div:nth-child(2),
   section.slider input.input-scroll,
@@ -928,7 +901,7 @@ button.right-btn:hover {
 
   header > div.logo-wrapper {
     width: 186px;
-    height: 100%;
+    height: 101%;
 
     background-image: linear-gradient(180deg, #5d5d5d, #464646);
   }
@@ -963,6 +936,8 @@ button.right-btn:hover {
   }
 
   header > div.nav-wrapper nav {
+    margin: 0;
+    box-shadow: none;
     width: 100%;
     height: 100%;
   }
